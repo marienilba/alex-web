@@ -1,0 +1,92 @@
+---
+import "../styles/base.css";
+import Draw from "../components/Draw.astro";
+import "@fontsource/delicious-handrawn";
+import "@fontsource/swanky-and-moo-moo";
+import Layout from "../components/Layout.astro";
+
+const colors = [
+  "red",
+  "yellow",
+  "green",
+  "red",
+  "green",
+  "blue",
+  "pink",
+  "violet",
+  "pink",
+  "orange",
+  "red",
+  "indigo",
+  "blue",
+  "indigo",
+  "violet",
+];
+---
+
+<Layout classname="bg-[url('/backgrounds/sm.jpg')]">
+  <section class="relative min-h-screen">
+    <Draw draw="sun" classname="h-96 w-96 top-0 left-0" />
+    <Draw draw="house" classname="h-[36rem] w-[36rem] bottom-0 right-0" />
+    <Draw draw="clouds" classname="h-[24rem] w-[24rem] top-0 left-1/2" />
+    <div class="h-screen flex flex-col justify-center items-center">
+      <h1 class="text-[10rem] font-handraw z-10 drop-shadow-lg">
+        {
+          "Alexandra Liard"
+            .split("")
+            .map((letter, index) => (
+              <span style={`color: ${colors[index]}`}>{letter}</span>
+            ))
+        }
+      </h1>
+      <div class="mr-auto pl-20 translate-y-20">
+        <ul>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-blue" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+              >Présentation</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-green" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+            >
+              Psychothérapie de l'enfant</span
+            >
+          </li>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-red" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+              >Séance</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="relative">
+    <div class="flex justify-center gap-2">
+      <div
+        class="w-1/4 rounded-b-full overflow-hidden bg-[url('/draws/borders.svg')] bg-no-repeat"
+      >
+        <img src="/images/picture.png" />
+      </div>
+      <div>
+        <p class="max-w-lg text-4xl text-justify">
+          Après une longue carrière dans la Direction des Ressources Humaines,
+          je me suis reconvertie dans le métier de thérapeute pour enfant en
+          psychopathologie clinique.
+        </p>
+        <p class="max-w-lg text-4xl text-justify pb-4">
+          J’ai suivi un cursus de 7 années au sein de l’Ecole d’Analyse
+          Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
+          de me former par le biais de séminaires. Dans le cadre de ma pratique
+          je suis supervisée.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

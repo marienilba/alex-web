@@ -1,0 +1,11 @@
+---
+const { classname, draw } = Astro.props;
+---
+
+<div class={`absolute ${classname} z-0`}>
+  <div
+    class="block w-full h-full"
+    style=`background-image: url('/draws/${draw}.svg');`
+  >
+  </div>
+</div>
