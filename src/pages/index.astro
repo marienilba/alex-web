@@ -46,31 +46,34 @@ const colors = [
         <ul>
           <li class="flex items-center gap-2">
             <Draw draw="dot-blue" classname="relative w-12 h-12" />
-            <span
+            <a
+              href="#presentation"
               class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
-              >Présentation</span
+              >Présentation</a
             >
           </li>
           <li class="flex items-center gap-2">
             <Draw draw="dot-green" classname="relative w-12 h-12" />
-            <span
+            <a
+              href="#psychotherapie"
               class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
             >
-              Psychothérapie de l'enfant</span
+              Psychothérapie de l'enfant</a
             >
           </li>
           <li class="flex items-center gap-2">
             <Draw draw="dot-red" classname="relative w-12 h-12" />
-            <span
+            <a
+              href="#seance"
               class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
-              >Séance</span
+              >Séance</a
             >
           </li>
         </ul>
       </div>
     </div>
   </section>
-  <section class="relative">
+  <section class="relative" id="presentation">
     <h2 class="text-center text-8xl font-handraw">Présentation</h2>
     <div class="flex justify-center gap-2">
       <div
@@ -93,13 +96,13 @@ const colors = [
       </div>
     </div>
   </section>
-  <section class="relative py-20">
+  <section class="relative py-20" id="psychotherapie">
     <div class="flex flex-col gap-4 items-center justify-center">
       <h2 class="text-8xl font-handraw">La psychothérapie d’enfants</h2>
       <div class="max-w-4xl flex flex-col gap-2 text-4xl text-justify">
         <Draw
           draw="flower"
-          classname="absolute w-48 md:w-60 h-48 md:h-60 right-0 bottom-1/2"
+          classname="absolute opacity-25 md:opacity-100 w-60 h-60 right-0 bottom-1/2"
         />
         <p>
           Le but d’une psychothérapie d’enfant est de lui permettre de continuer
@@ -138,7 +141,7 @@ const colors = [
       />
     </div>
   </section>
-  <section class="relative py-20">
+  <section class="relative py-20" id="seance">
     <div class="flex flex-col gap-4 items-center">
       <Draw
         draw="seance"
