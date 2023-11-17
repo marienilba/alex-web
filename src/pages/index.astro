@@ -4,6 +4,7 @@ import Draw from "../components/Draw.astro";
 import "@fontsource/delicious-handrawn";
 import "@fontsource/swanky-and-moo-moo";
 import Layout from "../components/Layout.astro";
+import Picture from "../components/Picture.astro";
 
 const colors = [
   "red",
@@ -198,14 +199,17 @@ const colors = [
     <div class="flex gap-2 justify-center">
       <img
         src="images/cab1.jpg"
+        onclick="window.open('images/cab1.jpg')"
         class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
       />
       <img
         src="images/cab2.jpg"
+        onclick="window.open('images/cab2.jpg')"
         class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
       />
       <img
         src="images/cab3.jpg"
+        onclick="window.open('images/cab3.jpg')"
         class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
       />
     </div>
