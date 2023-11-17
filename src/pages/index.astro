@@ -1,151 +1,225 @@
 ---
-import Layout from "../components/Layout.astro";
-import Section1 from "../components/Section1.astro";
-import Section2 from "../components/Section2.astro";
-import Section3 from "../components/Section3.astro";
-
 import "../styles/base.css";
-import "@fontsource/orelega-one";
-import "@fontsource-variable/inter";
+import Draw from "../components/Draw.astro";
+import "@fontsource/delicious-handrawn";
+import "@fontsource/swanky-and-moo-moo";
+import Layout from "../components/Layout.astro";
+
+const colors = [
+  "red",
+  "yellow",
+  "green",
+  "red",
+  "green",
+  "blue",
+  "pink",
+  "violet",
+  "pink",
+  "orange",
+  "red",
+  "indigo",
+  "blue",
+  "indigo",
+  "violet",
+];
 ---
 
-<Layout classname="bg-automn-200">
-  <main class="min-h-screen w-screen overflow-x-hidden relative">
-    <section class="h-screen flex flex-col items-center relative">
-      <Section1 />
-      <h1
-        class="text-[11rem] max-lg:pt-[50%] pt-32 ml-auto px-4 text-white font-orelaga drop-shadow-lg cursor-default"
-      >
+<Layout classname="bg-[url('/backgrounds/sm.jpg')]">
+  <section class="relative min-h-screen">
+    <Draw draw="sun" classname="h-96 w-96 top-0 left-0 scale-125" />
+    <Draw draw="house" classname="h-[36rem] w-[36rem] bottom-0 right-0" />
+    <Draw
+      draw="clouds"
+      classname="h-[24rem] w-[24rem] top-0 left-1/2 scale-125"
+    />
+    <div class="h-screen flex flex-col justify-center items-center">
+      <h1 class="text-[10rem] font-handraw z-10 drop-shadow-lg">
         {
           "Alexandra Liard"
             .split("")
-            .map((letter) => (
-              <span class="hover:text-automn-400 transition-colors duration-500">
-                {letter}
-              </span>
+            .map((letter, index) => (
+              <span style={`color: ${colors[index]}`}>{letter}</span>
             ))
         }
       </h1>
-      <div class="flex mr-auto px-20 flex-1 justify-center flex-col">
-        <ul class="list-disc text-7xl">
-          <li
-            class="font-orelaga text-white cursor-pointer drop-shadow-lg hover:text-automn-400 transition-colors duration-500"
-          >
-            <a href="#presentation">Présentation et cabinet</a>
+      <div class="mr-auto pl-20 translate-y-20">
+        <ul>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-blue" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+              >Présentation</span
+            >
           </li>
-          <li
-            class="font-orelaga text-white cursor-pointer drop-shadow-lg hover:text-automn-400 transition-colors duration-500"
-          >
-            <a href="#psychotherapie"> Psychothérapie d'enfant</a>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-green" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+            >
+              Psychothérapie de l'enfant</span
+            >
           </li>
-          <li
-            class="font-orelaga text-white cursor-pointer drop-shadow-lg hover:text-automn-400 transition-colors duration-500"
-          >
-            <a href="#contact"> Séance et contact</a>
+          <li class="flex items-center gap-2">
+            <Draw draw="dot-red" classname="relative w-12 h-12" />
+            <span
+              class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy"
+              >Séance</span
+            >
           </li>
         </ul>
       </div>
-    </section>
-    <section id="presentation" class="h-screen relative">
-      <Section2 />
+    </div>
+  </section>
+  <section class="relative">
+    <h2 class="text-center text-8xl font-handraw">Présentation</h2>
+    <div class="flex justify-center gap-2">
       <div
-        class="flex max-lg:flex-col max-lg:gap-8 flex-row h-full items-center"
+        class="w-1/4 rounded-b-full overflow-hidden bg-[url('/draws/borders.svg')] bg-no-repeat"
       >
-        <div
-          class="flex w-1/3 self-end max-lg:self-center max-lg:w-1/2 z-[-2] rounded-b-full overflow-hidden flex-shrink-0"
-        >
-          <img src="/images/picture.png" />
-        </div>
-        <div
-          class="text-2xl max-lg:text-5xl text-white drop-shadow-lg flex flex-1 font-bold flex-col gap-2 max-lg:gap-8 items-center"
-        >
-          <p class="max-w-lg max-lg:max-w-full max-lg:px-8 text-justify">
-            Après une longue carrière dans la Direction des Ressources Humaines,
-            je me suis reconvertie dans le métier de thérapeute pour enfant en
-            psychopathologie clinique.
-          </p>
-          <p class="max-w-lg max-lg:max-w-full max-lg:px-8 text-justify pb-4">
-            J’ai suivi un cursus de 7 années au sein de l’Ecole d’Analyse
-            Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
-            de me former par le biais de séminaires. Dans le cadre de ma
-            pratique je suis supervisée.
-          </p>
-          <div
-            class="relative w-full flex justify-center max-lg:mt-auto max-lg:mb-auto"
-          >
-            <img
-              src="/images/cab2.jpg"
-              class="rounded-full w-1/4 object-contain lg:absolute right-60 hover:scale-[3] z-10 transition-transform duration-500 hover:-translate-x-full cursor-pointer"
-            />
-            <img
-              src="/images/cab1.jpg"
-              class="rounded-full w-1/4 object-contain lg:absolute right-40 lg:translate-x-1/4 lg:-translate-y-1/4 hover:scale-[3] z-10 transition-transform duration-500 hover:-translate-x-full cursor-pointer"
-            />
-            <img
-              src="/images/cab3.jpg"
-              class="rounded-full w-1/4 object-contain lg:absolute right-32 lg:translate-x-1/2 hover:scale-[3] z-10 transition-transform duration-500 hover:-translate-x-full cursor-pointer"
-            />
-          </div>
-        </div>
+        <img src="/images/picture.png" />
       </div>
-    </section>
-    <section id="psychotherapie" class="h-[200vh] relative">
-      <div
-        class="flex flex-col items-center h-full py-8 text-white drop-shadow-lg font-bold gap-2"
-      >
-        <h2
-          class="text-5xl max-lg:text-9xl text-justify max-lg:text-center py-4"
-        >
-          La psychothérapie d’enfants
-        </h2>
-        <div class="flex flex-col gap-2 max-lg:gap-8">
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify italic"
-          >
-            Le but d’une psychothérapie d’enfant est de lui permettre de
-            continuer à grandir que ce soit émotionnellement, intellectuellement
-            ou psychiquement.
-          </p>
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify"
-          >
-            Dans ma pratique j’accompagne les enfants jusqu’à l’adolescence.
-          </p>
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify"
-          >
-            Je suis spécialisée dans le soin de l’enfant et ses premiers signes
-            de souffrance qui peuvent être anodins (difficulté à s’endormir,
-            colère, somatisations…) ou plus inquiétants (repli, troubles
-            alimentaires, problème de propreté, envahissement du développement,
-            agitation, violence…).
-          </p>
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify"
-          >
-            Je m’intéresse également au lien entre l’enfant et ses parents,
-            comme l’écrivait winnicott « un enfant seul cela n’existe pas ».
-          </p>
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify"
-          >
-            Dans ma pratique auprès des enfants, je fais un travail
-            d’exploration, j’utilise le jeu, le dessin et plus généralement tout
-            ce qui émane de l’imaginaire. En effet, rares sont les enfants qui
-            vont pouvoir s’asseoir et parler de leurs difficultés comme pourrait
-            le faire un adulte en thérapie.
-          </p>
-          <p
-            class="max-w-2xl max-lg:max-w-full max-lg:text-5xl text-2xl px-2.5 max-lg:px-8 text-justify"
-          >
-            C’est en cela que ce métier m’anime et me passionne ; soigner le
-            symptôme est mon objectif.
-          </p>
-        </div>
+      <div>
+        <p class="max-w-lg text-4xl text-justify">
+          Après une longue carrière dans la Direction des Ressources Humaines,
+          je me suis reconvertie dans le métier de thérapeute pour enfant en
+          psychopathologie clinique.
+        </p>
+        <p class="max-w-lg text-4xl text-justify pb-4">
+          J’ai suivi un cursus de 7 années au sein de l’Ecole d’Analyse
+          Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
+          de me former par le biais de séminaires. Dans le cadre de ma pratique
+          je suis supervisée.
+        </p>
       </div>
-    </section>
-    <section id="contact" class="h-screen relative">
-      <Section3 />
-    </section>
-  </main>
+    </div>
+  </section>
+  <section class="relative py-20">
+    <div class="flex flex-col gap-4 items-center justify-center">
+      <h2 class="text-8xl font-handraw">La psychothérapie d’enfants</h2>
+      <div class="max-w-4xl flex flex-col gap-2 text-4xl text-justify">
+        <Draw
+          draw="flower"
+          classname="absolute w-48 md:w-60 h-48 md:h-60 right-0 bottom-1/2"
+        />
+        <p>
+          Le but d’une psychothérapie d’enfant est de lui permettre de continuer
+          à grandir que ce soit émotionnellement, intellectuellement ou
+          psychiquement.
+        </p>
+        <p>Dans ma pratique j’accompagne les enfants jusqu’à l’adolescence.</p>
+        <p>
+          Je suis spécialisée dans le soin de l’enfant et ses premiers signes de
+          souffrance qui peuvent être anodins (difficulté à s’endormir, colère,
+          somatisations…) ou plus inquiétants (repli, troubles alimentaires,
+          problème de propreté, envahissement du développement, agitation,
+          violence…).
+        </p>
+        <p>
+          Je m’intéresse également au lien entre l’enfant et ses parents, comme
+          l’écrivait winnicott « un enfant seul cela n’existe pas ».
+        </p>
+        <p>
+          Dans ma pratique auprès des enfants, je fais un travail d’exploration,
+          j’utilise le jeu, le dessin et plus généralement tout ce qui émane de
+          l’imaginaire. En effet, rares sont les enfants qui vont pouvoir
+          s’asseoir et parler de leurs difficultés comme pourrait le faire un
+          adulte en thérapie.
+        </p>
+        <p>
+          C’est en cela que ce métier m’anime et me passionne ; soigner le
+          symptôme est mon objectif.
+        </p>
+      </div>
+      <h2 class="text-8xl font-handraw">Les symptomes</h2>
+      <Draw
+        draw="symptomes"
+        classname="relative w-screen h-96"
+        bg="bg-center"
+      />
+    </div>
+  </section>
+  <section class="relative py-20">
+    <div class="flex flex-col gap-4 items-center">
+      <Draw
+        draw="seance"
+        classname="absolute w-96 h-96 left-1/2 -translate-x-1/2 bottom-0 translate-y-2/3 scale-150"
+      />
+      <h2 class="text-8xl font-handraw text-center">
+        Le dispositif de la psychothérapie
+      </h2>
+      <table class="table-auto max-w-4xl text-4xl py-2">
+        <tr class="border border-black border-dashed">
+          <td class="border border-black border-dashed text-center"
+            >Une première séance</td
+          >
+          <td class="border border-black border-dashed pl-4"
+            >De 45 mn avec l’enfant et ses parents me permettra de comprendre
+            les besoins et les attentes. Durant cette séance je présente mon
+            approche et le déroulement de l’accompagnement
+          </td>
+        </tr>
+        <tr class="border border-black border-dashed">
+          <td class="border border-black border-dashed text-center"
+            >Une séance hebdomadaire</td
+          >
+          <td class="border border-black border-dashed pl-4"
+            >De 30 mn avec l’enfant</td
+          >
+        </tr>
+        <tr class="border border-black border-dashed">
+          <td class="border border-black border-dashed text-center"
+            >Une séance parents-enfant</td
+          >
+          <td class="border border-black border-dashed pl-4"
+            >Toutes les 5 séances individuelles avec l’enfant</td
+          >
+        </tr>
+        <tr class="border border-black border-dashed">
+          <td class="border border-black border-dashed text-center"
+            >Coût de la séance parents-enfant</td
+          >
+          <td class="border border-black border-dashed pl-4">75 €</td>
+        </tr>
+        <tr class="border border-black border-dashed">
+          <td class="border border-black border-dashed text-center"
+            >Coût de la séance avec l’enfant</td
+          >
+          <td class="border border-black border-dashed pl-4">55 €</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="relative py-20">
+    <h2 class="text-center text-8xl font-handraw">Mon cabinet</h2>
+    <div class="flex gap-2 justify-center">
+      <img
+        src="images/cab1.jpg"
+        class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
+      />
+      <img
+        src="images/cab2.jpg"
+        class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
+      />
+      <img
+        src="images/cab3.jpg"
+        class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"
+      />
+    </div>
+    <div class="flex items-center flex-col gap-2 py-2">
+      <div class="max-w-4xl flex flex-col items-start text-4xl">
+        <a
+          href="https://maps.app.goo.gl/G5c33MoTBHmTh84V8"
+          class="decoration-wavy hover:underline"
+          target="_blank"
+        >
+          Centre Santé, 11 boulevard Burdeau, 69400, Villefranche sur Saône
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="relative pt-20">
+    <div class="flex justify-center gap-2 text-xl">
+      <h6>Alexandra Liard</h6>
+    </div>
+  </section>
 </Layout>

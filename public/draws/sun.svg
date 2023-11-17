@@ -1,63 +1,63 @@
 <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
   <ellipse
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     cx="249.219"
     cy="230.843"
     rx="105.005"
     ry="95.093"></ellipse>
   <path
-    style="fill-rule: nonzero; stroke-linecap: square; paint-order: stroke; stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="fill-rule: nonzero; stroke-linecap: square; paint-order: stroke; stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 211.257 141.704 C 202.351 144.802 195.457 151.814 187.742 156.915 C 141.035 187.799 124.302 248.054 164.462 293.202 C 173.491 303.352 187.425 307.687 199.813 311.84 C 205.635 313.791 211.049 317.68 217.085 318.896 C 247.05 324.934 281.145 316.269 307.454 302.566 C 315.351 298.453 323.945 295.762 330.69 289.595 C 344.985 276.522 346.468 256.959 348.238 238.936 C 349.636 224.701 354.224 208.392 351.029 194.05 C 347.304 177.331 329.861 158.735 315.205 150.348 C 294.042 138.236 262.85 127.74 238.913 128.353 C 229.332 128.599 219.569 131.019 210.065 132.282 C 206.837 132.71 203.558 132.803 200.353 133.381 C 199.465 133.541 195.751 134.98 196.129 133.882"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 158.261 257.086 C 146.085 269.596 125.914 287.5 119.422 304.813"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 195.908 275.756 C 195.908 296.769 197.98 318.224 192.047 338.598 C 190.671 343.323 190.215 354.498 184.869 354.498"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 242.429 278.228 C 257.911 286.385 264.969 314.213 273.656 328.691 C 277.472 335.05 286.797 348.808 287.569 356.719 C 287.668 357.729 285.747 355.779 284.984 355.109"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 309.223 256.783 C 326.988 258.948 340.403 288.839 351.151 301.277 C 351.347 301.504 364.039 317.49 365.031 317.035 C 366.271 316.466 362.013 315.521 362.119 314.161"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 324.579 224.055 C 342.355 224.055 376.099 230.546 391.581 220.912"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 312.887 185.175 C 330.732 164.273 323.558 134.24 335.033 111.293"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 257.229 150.277 C 257.229 127.152 255.506 103.4 255.506 80.613"></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 192.336 172.41 C 193.302 153.94 180.669 131.677 174.733 114.254 C 174.083 112.345 167.568 96.046 164.34 96.046"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 182.956 201.961 C 158.522 186.817 131.18 167.986 100.803 167.986"
   ></path>
   <path
-    style="stroke-width: 8px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 14px; fill: none; stroke: #FFFF00;"
     d="M 160.322 219.449 C 132.387 225.747 101.916 225.943 76.273 240.437"
   ></path>
   <path
-    style="stroke-width: 12px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 20px; fill: none; stroke: #FFFF00;"
     d="M 217.985 189.183 C 217.985 201.765 217.985 214.347 217.985 226.929"
   ></path>
   <path
-    style="stroke-width: 12px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 20px; fill: none; stroke: #FFFF00;"
     d="M 256.262 187.685 C 256.262 201.672 256.683 215.772 256.683 229.697"
   ></path>
   <path
-    style="stroke-width: 12px; fill: none; stroke: #FFFF00;"
+    style="stroke-width: 20px; fill: none; stroke: #FFFF00;"
     d="M 186.167 249.293 C 195.002 249.293 203.644 255.621 211.907 258.49 C 234.576 266.363 254.988 267.143 275.791 253.906 C 286.338 247.195 293.535 246.335 293.535 235.008"
   ></path>
 </svg>
