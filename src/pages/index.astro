@@ -33,7 +33,9 @@ const colors = [
       classname="h-[24rem] w-[24rem] top-0 left-1/2 scale-125"
     />
     <div class="h-screen flex flex-col justify-center items-center">
-      <h1 class="text-[10rem] font-handraw z-10 drop-shadow-lg">
+      <h1
+        class="text-[10rem] font-handraw z-10 drop-shadow-lg max-w-lg text-center leading-[7.5rem]"
+      >
         {
           "Alexandra Liard"
             .split("")
@@ -84,15 +86,13 @@ const colors = [
       </div>
       <div>
         <p class="max-w-lg text-4xl text-justify">
-          Après une longue carrière dans la Direction des Ressources Humaines,
-          je me suis reconvertie dans le métier de thérapeute pour enfant en
-          psychopathologie clinique.
+          Je suis thérapeute pour enfants en psychopathologie clinique.
         </p>
         <p class="max-w-lg text-4xl text-justify pb-4">
-          J’ai suivi un cursus de 7 années au sein de l’Ecole d’Analyse
-          Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
-          de me former par le biais de séminaires. Dans le cadre de ma pratique
-          je suis supervisée.
+          Formée durant 7 années au sein de l'Ecole d'Analyse Transactionnelle
+          de Lyon (E.A.T Lyon) auprès de laquelle je continue de me former par
+          le biais de séminaires. Dans le cadre de ma pratique je suis
+          supervisée.
         </p>
       </div>
     </div>
@@ -104,20 +104,24 @@ const colors = [
         <Draw
           draw="flower"
           classname="absolute w-60 h-60 right-0 bottom-1/2"
-          bg="opacity-25 md:opacity-100"
+          bg="opacity-25"
         />
         <p>
           Le but d’une psychothérapie d’enfant est de lui permettre de continuer
           à grandir que ce soit émotionnellement, intellectuellement ou
-          psychiquement.
+          psychiquement. J'ai fait le choix d'accompagner les enfants dans leur
+          croissance en les rendant acteur de leur histoire.
         </p>
-        <p>Dans ma pratique j’accompagne les enfants jusqu’à l’adolescence.</p>
+        <!-- <p>Dans ma pratique j’accompagne les enfants jusqu’à l’adolescence.</p> -->
+        <p>
+          Durant mes séances d'accompagnement je suspends mes connaissances
+          théoriques pour me mettre à l'écoute de l'enfant ; Je refuse de me
+          servir de ces connaissanes comme grille de lecture qui enferme, et ne
+          les utilisent que comme repères qui ouvrent la porte de la rencontre.
+        </p>
         <p>
           Je suis spécialisée dans le soin de l’enfant et ses premiers signes de
-          souffrance qui peuvent être anodins (difficulté à s’endormir, colère,
-          somatisations…) ou plus inquiétants (repli, troubles alimentaires,
-          problème de propreté, envahissement du développement, agitation,
-          violence…).
+          souffrance (difficulté à s’endormir, colère, somatisations…).
         </p>
         <p>
           Je m’intéresse également au lien entre l’enfant et ses parents, comme
@@ -131,8 +135,8 @@ const colors = [
           adulte en thérapie.
         </p>
         <p>
-          C’est en cela que ce métier m’anime et me passionne ; soigner le
-          symptôme est mon objectif.
+          C’est en cela que ce métier m’anime et me passionne ; J'acceuille
+          l'enfant avec sa richesse et son environnment.
         </p>
       </div>
       <h2 class="text-8xl font-handraw">Les symptomes</h2>
@@ -143,7 +147,7 @@ const colors = [
       />
     </div>
   </section>
-  <section class="relative py-20" id="seance">
+  <section class="relative" id="seance">
     <div class="flex flex-col gap-4 items-center">
       <Draw
         draw="seance"
@@ -158,7 +162,7 @@ const colors = [
             >Une première séance</td
           >
           <td class="border border-black border-dashed pl-4"
-            >De 45 mn avec l’enfant et ses parents me permettra de comprendre
+            >De 45 mn avec l’enfant et ses parents me permettront de comprendre
             les besoins et les attentes. Durant cette séance je présente mon
             approche et le déroulement de l’accompagnement
           </td>
@@ -225,7 +229,7 @@ const colors = [
       </div>
     </div>
   </section>
-  <section class="flex items-center justify-center">
-    <p>Alexandra Liard</p>
+  <section class="flex items-center text-xl justify-center">
+    <p>Alexandra Liard, liard_alexandra@orange.fr, 0785969694</p>
   </section>
 </Layout>
