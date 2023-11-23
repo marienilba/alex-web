@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.2.1",
     "@astrojs/tailwind": "^5.0.2",
+    "@emailjs/browser": "^3.11.0",
     "@fontsource-variable/inter": "^5.0.15",
     "@fontsource/delicious-handrawn": "^5.0.17",
     "@fontsource/orelega-one": "^5.0.17",

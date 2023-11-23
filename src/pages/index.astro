@@ -24,6 +24,27 @@ const colors = [
 ];
 ---
 
+<script>
+  import emailjs from "@emailjs/browser";
+  emailjs.init(import.meta.env.PUBLIC_EMAILJS_ID!);
+  const element = document.querySelector("form");
+  if (element) {
+    element.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      emailjs
+        .sendForm(
+          import.meta.env.PUBLIC_SERVICE_ID!,
+          import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID!,
+          this,
+          import.meta.env.PUBLIC_EMAILJS_ID!,
+        )
+        .then(() => {
+          window.location.reload();
+        });
+    });
+  }
+</script>
 <Layout classname="bg-[url('/backgrounds/sm.jpg')]">
   <section class="relative min-h-screen">
     <Draw draw="sun" classname="h-96 w-96 top-0 left-0 scale-125" />
@@ -79,7 +100,6 @@ const colors = [
     <h2 class="text-center text-8xl font-handraw">Présentation</h2>
     <div class="flex justify-center gap-2">
       <div
-
         class="w-1/4 rounded-b-full overflow-hidden bg-[url('/draws/borders.svg')] bg-no-repeat"
       >
         <img src="/images/picture.png" />
@@ -88,11 +108,13 @@ const colors = [
         <p class="max-w-lg text-4xl text-justify">
           Je suis thérapeute pour enfants en psychopathologie clinique.
         </p>
+        <p class="max-w-lg text-4xl text-justify">
+          Je me suis formée durant 7 années au sein de l'Ecole d'Analyse
+          Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
+          d'enrichir mes connaissances par le biais de séminaires.
+        </p>
         <p class="max-w-lg text-4xl text-justify pb-4">
-          Formée durant 7 années au sein de l'Ecole d'Analyse Transactionnelle
-          de Lyon (E.A.T Lyon) auprès de laquelle je continue de me former par
-          le biais de séminaires. Dans le cadre de ma pratique je suis
-          supervisée.
+          Dans le cadre de ma pratique je suis supervisée.
         </p>
       </div>
     </div>
@@ -112,7 +134,6 @@ const colors = [
           psychiquement. J'ai fait le choix d'accompagner les enfants dans leur
           croissance en les rendant acteur de leur histoire.
         </p>
-        <!-- <p>Dans ma pratique j’accompagne les enfants jusqu’à l’adolescence.</p> -->
         <p>
           Durant mes séances d'accompagnement je suspends mes connaissances
           théoriques pour me mettre à l'écoute de l'enfant ; Je refuse de me
@@ -128,11 +149,10 @@ const colors = [
           l’écrivait winnicott « un enfant seul cela n’existe pas ».
         </p>
         <p>
-          Dans ma pratique auprès des enfants, je fais un travail d’exploration,
-          j’utilise le jeu, le dessin et plus généralement tout ce qui émane de
-          l’imaginaire. En effet, rares sont les enfants qui vont pouvoir
-          s’asseoir et parler de leurs difficultés comme pourrait le faire un
-          adulte en thérapie.
+          Dans ma pratique, je fais un travail d’exploration, j’utilise le jeu,
+          le dessin et plus généralement tout ce qui émane de l’imaginaire. En
+          effet, rares sont les enfants qui vont pouvoir s’asseoir et parler de
+          leurs difficultés comme pourrait le faire un adulte en thérapie.
         </p>
         <p>
           C’est en cela que ce métier m’anime et me passionne ; J'acceuille
@@ -151,7 +171,7 @@ const colors = [
     <div class="flex flex-col gap-4 items-center">
       <Draw
         draw="seance"
-        classname="absolute w-96 h-96 left-1/2 -translate-x-1/2 bottom-0 translate-y-2/3 scale-150"
+        classname="absolute opacity-25 w-96 h-96 left-1/2 -translate-x-1/2 bottom-0 translate-y-2/3 scale-150"
       />
       <h2 class="text-8xl font-handraw text-center">
         Le dispositif de la psychothérapie
@@ -229,7 +249,99 @@ const colors = [
       </div>
     </div>
   </section>
-  <section class="flex items-center text-xl justify-center">
-    <p>Alexandra Liard, liard_alexandra@orange.fr, 0785969694</p>
+  <section class="relative flex flex-col items-center">
+    <h2 class="text-center text-8xl font-handraw">Ecrivez moi</h2>
+    <form class="max-w-4xl w-full">
+      <section class="flex flex-col font-minion text-lg font-semibold">
+        <section class="flex flex-row self-stretch gap-4 mb-6">
+          <section class="flex flex-col self-stretch w-full">
+            <label for="lastname" class="mb-2">Nom*</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+              placeholder="Doe"
+              required
+            />
+          </section>
+          <section class="flex flex-col w-full">
+            <label for="firstname" class="mb-2">Prénom*</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+              placeholder="John"
+              required
+            />
+          </section>
+        </section>
+        <section class="flex flex-row self-stretch gap-4 mb-6">
+          <section class="flex flex-col w-full">
+            <label for="email" class="mb-2">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+              placeholder="john.doe@mail.com"
+              required
+            />
+          </section>
+          <section class="flex flex-col w-full">
+            <label for="tel" class="mb-2">Téléphone</label>
+            <input
+              type="text"
+              id="tel"
+              name="tel"
+              class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+              placeholder="06 07 08 09 10"
+            />
+          </section>
+        </section>
+        <section class="flex flex-col w-full mb-6">
+          <label for="object" class="mb-2">Object</label>
+          <input
+            type="text"
+            id="object"
+            name="object"
+            class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+            placeholder="Prise de rendez-vous"
+          />
+        </section>
+        <section class="flex flex-col w-full mb-6">
+          <label for="message" class="mb-2">Message*</label>
+          <textarea
+            required
+            id="message"
+            name="message"
+            class="border border-black border-dashed text-sm rounded-lg block w-full p-2.5"
+            placeholder="Bonjour, j'aimerais..."></textarea>
+        </section>
+        <section class="flex">
+          <button
+            type="submit"
+            class="relative p-4 w-full border-2 hover:border-dashed border-black font-minion text-2xl rounded font-semibold"
+            >Envoyer
+          </button>
+        </section>
+      </section>
+    </form>
+  </section>
+  <section>
+    <section
+      class="border-t border-black border-dashed flex justify-between text-center py-10 mt-10 text-4xl"
+    >
+      <p class="flex-1">Alexandra Liard</p>
+      <a
+        href="mailto:liard_alexandra@orange.fr"
+        class="flex-1 hover:underline decoration-wavy"
+        >liard_alexandra@orange.fr</a
+      >
+      <a href="tel:0785969694" class="flex-1 hover:underline decoration-wavy"
+        >0785969694</a
+      >
+    </section>
   </section>
 </Layout>
