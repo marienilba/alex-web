@@ -1,7 +1,7 @@
 import sitemap from "@astrojs/sitemap";
 import vercelServerless from "@astrojs/vercel";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
