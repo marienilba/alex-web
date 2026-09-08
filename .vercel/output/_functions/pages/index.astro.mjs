@@ -1,0 +1,81 @@
+import { f as createComponent, k as renderScript, l as renderComponent, r as renderTemplate, m as maybeRenderHead, h as addAttribute } from '../chunks/astro/server_tc21AS5r.mjs';
+import 'piccolore';
+import { $ as $$Layout, a as $$Draw } from '../chunks/Layout_DEYE2jtI.mjs';
+/* empty css                                 */
+export { renderers } from '../renderers.mjs';
+
+const $$Index = createComponent(($$result, $$props, $$slots) => {
+  const colors = [
+    "red",
+    "yellow",
+    "green",
+    "red",
+    "green",
+    "blue",
+    "pink",
+    "violet",
+    "pink",
+    "orange",
+    "red",
+    "indigo",
+    "blue",
+    "indigo",
+    "violet"
+  ];
+  return renderTemplate`${renderScript($$result, "/Users/nilba/Desktop/Dossiers/Development/Work/Alexandra/alex-web/src/pages/index.astro?astro&type=script&index=0&lang.ts")} ${renderComponent($$result, "Layout", $$Layout, { "classname": "bg-[url('/backgrounds/sm.jpg')]" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<section class="relative min-h-screen"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "sun", "classname": "h-96 w-96 top-0 left-0 scale-125" })} ${renderComponent($$result2, "Draw", $$Draw, { "draw": "house", "classname": "h-[36rem] w-[36rem] bottom-0 right-0" })} ${renderComponent($$result2, "Draw", $$Draw, { "draw": "clouds", "classname": "h-[24rem] w-[24rem] top-0 left-1/2 scale-125" })} <div class="h-screen flex flex-col justify-center items-center"> <h1 class="text-[10rem] font-handraw z-10 drop-shadow-lg max-w-lg text-center leading-[7.5rem] cursor-default"> ${"Alexandra Liard".split("").map((letter, index) => renderTemplate`<span${addAttribute(`color: ${colors[index]}`, "style")}>${letter}</span>`)} </h1> <div class="mr-auto pl-20 translate-y-20"> <ul> <li class="flex items-center gap-2"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "dot-blue", "classname": "relative w-12 h-12" })} <a href="#presentation" class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy">Présentation</a> </li> <li class="flex items-center gap-2"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "dot-green", "classname": "relative w-12 h-12" })} <a href="#psychotherapie" class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy">
+Psychothérapie de l'enfant</a> </li> <li class="flex items-center gap-2"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "dot-red", "classname": "relative w-12 h-12" })} <a href="#seance" class="text-5xl drop-shadow-lg hover:underline cursor-pointer decoration-wavy">Séance</a> </li> </ul> </div> </div> </section> <section class="relative" id="presentation"> <h2 class="text-center text-8xl font-handraw">Présentation</h2> <div class="flex justify-center gap-2"> <div class="w-1/4 rounded-b-full overflow-hidden bg-[url('/draws/borders.svg')] bg-no-repeat"> <img src="/images/picture.png"> </div> <div> <p class="max-w-lg text-4xl text-justify">
+Je suis thérapeute pour enfants en psychopathologie clinique.
+</p> <p class="max-w-lg text-4xl text-justify">
+Je me suis formée durant 7 années au sein de l'Ecole d'Analyse
+          Transactionnelle de Lyon (E.A.T Lyon) auprès de laquelle je continue
+          d'enrichir mes connaissances par le biais de séminaires.
+</p> <p class="max-w-lg text-4xl text-justify pb-4">
+Dans le cadre de ma pratique je suis supervisée.
+</p> </div> </div> </section> <section class="relative py-20" id="psychotherapie"> <div class="flex flex-col gap-4 items-center justify-center"> <h2 class="text-8xl font-handraw">La psychothérapie d’enfants</h2> <div class="max-w-4xl flex flex-col gap-2 text-4xl text-justify"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "flower", "classname": "absolute w-60 h-60 right-0 bottom-1/2", "bg": "opacity-25" })} <p>
+Le but d’une psychothérapie d’enfant est de lui permettre de continuer
+          à grandir que ce soit émotionnellement, intellectuellement ou
+          psychiquement. J'ai fait le choix d'accompagner les enfants dans leur
+          croissance en les rendant acteur de leur histoire.
+</p> <p>
+Durant mes séances d'accompagnement je suspends mes connaissances
+          théoriques pour me mettre à l'écoute de l'enfant ; Je refuse de me
+          servir de ces connaissanes comme grille de lecture qui enferme, et ne
+          les utilisent que comme repères qui ouvrent la porte de la rencontre.
+</p> <p>
+Je suis spécialisée dans le soin de l’enfant et ses premiers signes de
+          souffrance (difficulté à s’endormir, colère, somatisations…).
+</p> <p>
+Je m’intéresse également au lien entre l’enfant et ses parents, comme
+          l’écrivait winnicott « un enfant seul cela n’existe pas ».
+</p> <p>
+Dans ma pratique, je fais un travail d’exploration, j’utilise le jeu,
+          le dessin et plus généralement tout ce qui émane de l’imaginaire. En
+          effet, rares sont les enfants qui vont pouvoir s’asseoir et parler de
+          leurs difficultés comme pourrait le faire un adulte en thérapie.
+</p> <p>
+C’est en cela que ce métier m’anime et me passionne ; J'acceuille
+          l'enfant avec sa richesse et son environnment.
+</p> </div> <h2 class="text-8xl font-handraw">Les symptomes</h2> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "symptomes", "classname": "relative w-screen h-96", "bg": "bg-center" })} </div> </section> <section class="relative" id="seance"> <div class="flex flex-col gap-4 items-center"> ${renderComponent($$result2, "Draw", $$Draw, { "draw": "seance", "classname": "absolute opacity-25 w-96 h-96 left-1/2 -translate-x-1/2 bottom-0 translate-y-2/3 scale-150" })} <h2 class="text-8xl font-handraw text-center">
+Le dispositif de la psychothérapie
+</h2> <table class="table-auto max-w-4xl text-4xl py-2"> <tr class="border border-black border-dashed"> <td class="border border-black border-dashed text-center">Une première séance</td> <td class="border border-black border-dashed pl-4">D'une heure avec l’enfant et ses parents me permettra de comprendre
+            les besoins et les attentes. Durant cette séance je présente ma
+            pratique et le déroulement de l’accompagnement
+</td> </tr> <tr class="border border-black border-dashed"> <td class="border border-black border-dashed text-center">Une séance hebdomadaire</td> <td class="border border-black border-dashed pl-4">De 30 mn avec l’enfant</td> </tr> <tr class="border border-black border-dashed"> <td class="border border-black border-dashed text-center">Une séance parents-enfant</td> <td class="border border-black border-dashed pl-4">Toutes les 5 séances individuelles avec l’enfant</td> </tr> <tr class="border border-black border-dashed"> <td class="border border-black border-dashed text-center">Coût de la séance parents-enfant</td> <td class="border border-black border-dashed pl-4">65 €</td> </tr> <tr class="border border-black border-dashed"> <td class="border border-black border-dashed text-center">Coût de la séance avec l’enfant</td> <td class="border border-black border-dashed pl-4">45 €</td> </tr> </table> </div> </section> <section class="relative py-20"> <h2 class="text-center text-8xl font-handraw">Mon cabinet</h2> <div class="flex gap-2 justify-center"> <img src="images/cab1.jpg" onclick="window.open('images/cab1.jpg');" class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"> <img src="images/cab2.jpg" onclick="window.open('images/cab2.jpg');" class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"> <img src="images/cab3.jpg" onclick="window.open('images/cab3.jpg');" class="rounded-full object-contain w-1/6 aspect-square hover:scale-[2.5] transition-transform duration-500 cursor-pointer border-2 border-black"> </div> <div class="flex items-center flex-col gap-2 py-2"> <div class="max-w-4xl flex flex-col items-start text-4xl"> <a href="https://maps.app.goo.gl/G5c33MoTBHmTh84V8" class="decoration-wavy hover:underline" target="_blank">
+Centre Santé, 11 boulevard Burdeau, 69400, Villefranche sur Saône
+</a> </div> </div> </section> <section class="relative flex flex-col items-center"> <h2 class="text-center text-8xl font-handraw">Ecrivez moi</h2> <form class="max-w-4xl w-full"> <section class="flex flex-col font-minion text-lg font-semibold"> <section class="flex flex-row self-stretch gap-4 mb-6"> <section class="flex flex-col self-stretch w-full"> <label for="lastname" class="mb-2 text-2xl">Nom*</label> <input type="text" id="lastname" name="lastname" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="Doe" required> </section> <section class="flex flex-col w-full"> <label for="firstname" class="mb-2 text-2xl">Prénom*</label> <input type="text" id="firstname" name="firstname" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="John" required> </section> </section> <section class="flex flex-row self-stretch gap-4 mb-6"> <section class="flex flex-col w-full"> <label for="email" class="mb-2 text-2xl">Email*</label> <input type="email" id="email" name="email" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="john.doe@mail.com" required> </section> <section class="flex flex-col w-full"> <label for="tel" class="mb-2 text-2xl">Téléphone</label> <input type="text" id="tel" name="tel" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="06 07 08 09 10"> </section> </section> <section class="flex flex-col w-full mb-6"> <label for="object" class="mb-2 text-2xl">Objet</label> <input type="text" id="object" name="object" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="Prise de rendez-vous"> </section> <section class="flex flex-col w-full mb-6"> <label for="message" class="mb-2 text-2xl">Message*</label> <textarea required id="message" name="message" class="border border-black border-dashed text-lg block w-full p-2.5" placeholder="Bonjour, ..."></textarea> </section> <section class="flex"> <button type="submit" class="relative p-4 w-full border-2 hover:border-dashed border-black font-handraw text-3xl rounded font-semibold">Envoyer
+</button> </section> </section> </form> </section> <section> <section class="border-t border-black border-dashed flex justify-between text-center py-10 mt-10 text-4xl"> <p class="flex-1">Alexandra Liard</p> <a href="mailto:liard_alexandra@orange.fr" class="flex-1 hover:underline decoration-wavy">liard_alexandra@orange.fr</a> <a href="tel:0785969694" class="flex-1 hover:underline decoration-wavy">07 85 96 96 94</a> </section> <p class="text-center">© 2023 Alexandra Liard . Tous droits reservés.</p> </section> ` })}`;
+}, "/Users/nilba/Desktop/Dossiers/Development/Work/Alexandra/alex-web/src/pages/index.astro", void 0);
+
+const $$file = "/Users/nilba/Desktop/Dossiers/Development/Work/Alexandra/alex-web/src/pages/index.astro";
+const $$url = "";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Index,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

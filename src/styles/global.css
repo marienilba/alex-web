@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html,
+  body {
+    @apply scroll-smooth overflow-x-hidden;
+  }
+}
+
+@theme {
+  --font-sans: 'Swanky and Moo Moo', 'sans-serif';
+  --font-orelega: 'Orelega One', 'sans-serif';
+  --font-handraw: 'Delicious Handrawn', 'sans-serif';
+}

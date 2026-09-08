@@ -1,8 +1,15 @@
-import { defineConfig } from 'astro/config';
-
-import tailwind from "@astrojs/tailwind";
+import sitemap from "@astrojs/sitemap";
+import vercelServerless from "@astrojs/vercel";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig, fontProviders } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  output: "server",
+  adapter: vercelServerless(),
+  site: "https://www.alexandra-liard.com",
+  integrations: [sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
